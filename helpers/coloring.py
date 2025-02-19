@@ -1,7 +1,10 @@
 #!/usr/bin/env python
-
+from matplotlib.cm import ScalarMappable
+from matplotlib.colors import ListedColormap, BoundaryNorm
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
+
 
 colors_40 = ['#a9a9a9', '#2f4f4f', '#556b2f', '#a0522d', '#228b22', '#191970', '#8b0000', '#808000', '#4682b4', '#9acd32',
              '#20b2aa', '#00008b', '#32cd32', '#daa520', '#8fbc8f', '#800080', '#b03060', '#ff4500', '#ff8c00', '#6a5acd',
