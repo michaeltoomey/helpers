@@ -1,8 +1,10 @@
 #!/usr/bin/env python
-import matplotlib.pyplot as plt 
+import glob
+import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
+import pickle
 import seaborn as sns
 from tqdm import tqdm
 
@@ -33,3 +35,12 @@ def build_paths(paths):
 
 def build_path(path):
     os.makedirs(path)
+
+
+def find_matching_files(folder, pattern):
+    return glob.glob(os.path.join(folder, f"*{pattern}*"))
+
+
+def sort_files_by_date(filepaths):
+    filepaths.sort(key=lambda fp: os.path.getmtime(fp))
+    return filepaths
